@@ -1,23 +1,18 @@
+# fly.toml app configuration file generated for form-omd on 2025-04-20T18:49:35Z
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
 app = 'form-omd'
 primary_region = 'den'
-
-[build]
-  image = "formbricks/formbricks:latest"
-
-[env]
-  PORT = "3000"
-  NEXTAUTH_SECRET = "AGO7JKC0Fq/wULaUfos3HbGGN2hsieWv07IWuLUfNSk="
-  NEXTAUTH_URL = "https://form-omd.fly.dev"
-  DATABASE_URL = "postgresql://postgres:m0johAUjLRKymwx@n8n-omd-bd.internal:5432/postgres"
-  FORMBRICKS_ENVIRONMENT = "cloud"
 
 [http_service]
   internal_port = 3000
   force_https = true
-  auto_stop_machines = true
+  auto_stop_machines = 'stop'
   auto_start_machines = true
   min_machines_running = 0
-  processes = ["app"]
+  processes = ['app']
 
 [[vm]]
   memory = '1gb'
