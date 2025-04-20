@@ -1,4 +1,3 @@
-
 app = 'form-omd'
 primary_region = 'den'
 
@@ -6,6 +5,7 @@ primary_region = 'den'
   image = "formbricks/formbricks:latest"
 
 [env]
+  PORT = "3000"
   NEXTAUTH_SECRET = "AGO7JKC0Fq/wULaUfos3HbGGN2hsieWv07IWuLUfNSk="
   NEXTAUTH_URL = "https://form-omd.fly.dev"
   DATABASE_URL = "postgresql://postgres:m0johAUjLRKymwx@n8n-omd-bd.internal:5432/postgres"
@@ -24,4 +24,3 @@ primary_region = 'den'
   cpu_kind = 'shared'
   cpus = 1
   memory_mb = 1024
-
